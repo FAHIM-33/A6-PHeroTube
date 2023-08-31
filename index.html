@@ -8,23 +8,24 @@
   <link rel="stylesheet" href="./style.css">
   <!-- G fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="p-14 mx-auto brr">
   <header>
-
-    <nav class="flex justify-between">
-      <div>
-        <img src="./image/Logo.png" alt="Borken image of logo">
+    <nav class="flex">
+      <div class="flex-1">
+        <img src="./image/Logo.png" alt="">
       </div>
-      <div>
-        <button class="text-xl text-[#252525] bg-[#25252533] py-2 px-5 rounded-md focus:bg-[#FF1F3D] focus:text-white">Sort by view</button>
+      <div class="flex-1 text-center">
+        <button
+          class="text-xl text-[#252525] bg-[#25252533] py-2 px-5 rounded-md focus:bg-[#FF1F3D] focus:text-white">Sort by
+          view</button>
       </div>
-      <div>
-        <button class="main-btn">Blog</button>
+      <div class="flex-1 text-end">
+        <button class="main-btn"><a href="./blog.html">Blog</a></button>
       </div>
     </nav>
     <hr class="my-8">
@@ -34,7 +35,30 @@
       <button class="cat-btn">Comedy</button>
     </section>
   </header>
+
   <main>
+    <section id="card-container" class="grid grid-cols-4 gap-6 mt-10">
+
+      <div class="card rounded-lg">
+        <figure class="relative">
+          <img src="./image/Rectangle 1.png" alt="broken">
+          <p class="time-tag">3hrs 56 min ago</p>
+        </figure>
+        <div class="flex gap-3 items-start mt-2">
+          <img src="./image/Ellipse 1.svg" alt="" class="mt-2">
+          <div>
+            <h3 class="vid-title">Building a Winning UX Strategy Using the Kano Model</h3>
+            <div class="flex gap-2">
+              <p class="plain-text my-2">Awlad hossain</p>
+              <img class="" src="./image/fi_10629607.svg" alt="">
+            </div>
+            <p class="plain-text"><span>981</span>k views</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
   </main>
   <footer>
 
