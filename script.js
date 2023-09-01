@@ -25,7 +25,6 @@ const loadData = async (id = 1000) => {
 }
 
 function processor(vids) {
-  console.log(currentID);
   clear('card-container')
   clear('oops')
   if (vids.length === 0) {
@@ -52,7 +51,7 @@ function processor(vids) {
     div.innerHTML = `
     <div class="card rounded-lg">
     <figure class="relative">
-      <img class="w-full h-52 lg:h-48 md:rounded-lg" src="${card.thumbnail}" alt="Loading...">
+      <img class="w-full h-56 lg:h-48 md:rounded-lg" src="${card.thumbnail}" alt="Loading...">
       <p class="time-tag ${isTime}">${hour}hrs ${minute} min ago</p>
     </figure>
     <div class="flex gap-3 items-start mt-2 pl-2">
@@ -70,7 +69,6 @@ function processor(vids) {
     `;
     document.getElementById('card-container').appendChild(div)
   })
-
 }
 
 function clear(eID) {
@@ -82,34 +80,41 @@ function sort() {
   loadData(currentID)
     .then(arr => {
       arr.forEach(obj => {
-        // console.log(arr);
         let view = (obj.others.views.slice(0, -1));
         view *= 1;
         decendingArr.push(view);
       })
       decendingArr.sort((a, b) => { return b - a })
-      console.log(decendingArr);
+
       let strArr = [];
       decendingArr.map(num => {
         num += 'K'
         strArr.push(num);
-      }) // end of map to make str of dec Arr.
-      console.log(strArr);
+      }) 
 
-      strArr.forEach((num,i) => {
-        console.log(num, i)
+
+      strArr.forEach((num) => {
         arr.forEach(obj => {
           if(obj.others.views === num){
             sortedData.push(obj);
           }
         })
-        
+  
       })
-      console.log(sortedData);
+      sortedData = filterDups(sortedData)
       processor(sortedData)
 
     })
     .catch(err => console.error(err));
 }
+
+function filterDups(arr){
+  let pureObj = {};
+  arr.forEach(obj => {
+    pureObj[obj.title] = obj;
+  })
+  return Object.values(pureObj);
+}
+
 loadCatagories();
 loadData()
