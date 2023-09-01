@@ -62,7 +62,7 @@ function processor(vids) {
           <p class="plain-text md:my-2">${card.authors[0].profile_name}</p>
           <img class="svg ${isVarified}" src="./image/fi_10629607.svg" alt="">
         </div>
-        <p class="plain-text">${card.others.views}</p>
+        <p class="plain-text">${card.others.views} views</p>
       </div>
     </div>
   </div>
