@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>PH_Tube</title>
   <link rel="stylesheet" href="./style.css">
   <!-- G fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,33 +13,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-14 mx-auto brr">
+<body class="pt-4 md:p-8 lg:p-14 mx-auto">
   <header>
-    <nav class="flex">
+    <nav class="flex items-center gap-4 px-2">
       <div class="flex-1">
         <img src="./image/Logo.png" alt="">
       </div>
-      <div class="flex-1 text-center">
-        <button
-          class="text-xl text-[#252525] bg-[#25252533] py-2 px-5 rounded-md focus:bg-[#FF1F3D] focus:text-white">Sort by
+      <div class="md:flex-1 text-center">
+        <button onclick="sort()"
+          class="text-xl text-[#252525] bg-[#25252533] py-2 px-3 whitespace-nowrap rounded-md focus:bg-[#FF1F3D] focus:text-white">Sort by
           view</button>
       </div>
-      <div class="flex-1 text-end">
+      <div class="md:flex-1 text-end">
         <button class="main-btn"><a href="./blog.html">Blog</a></button>
       </div>
     </nav>
-    <hr class="my-8">
-    <section id="catagory-container" class="flex gap-6 justify-center">
-      <button class="cat-btn">all</button>
+    <hr class="my-4 md:my-8">
+    <section id="category-container" class="flex gap-2 md:gap-3 lg:gap-6 justify-center">
+      <!-- <button class="cat-btn">all</button>
       <button class="cat-btn">Music</button>
-      <button class="cat-btn">Comedy</button>
+      <button class="cat-btn">Comedy</button> -->
     </section>
   </header>
 
-  <main>
-    <section id="card-container" class="grid grid-cols-4 gap-6 mt-10">
+  <main id="main">
+    <section id="oops"></section>
+    <section id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
 
-      <div class="card rounded-lg">
+
+      <!-- <div class="card rounded-lg">
         <figure class="relative">
           <img src="./image/Rectangle 1.png" alt="broken">
           <p class="time-tag">3hrs 56 min ago</p>
@@ -50,13 +52,13 @@
             <h3 class="vid-title">Building a Winning UX Strategy Using the Kano Model</h3>
             <div class="flex gap-2">
               <p class="plain-text my-2">Awlad hossain</p>
-              <img class="" src="./image/fi_10629607.svg" alt="">
+              <img class="svg" src="./image/fi_10629607.svg" alt="">
             </div>
             <p class="plain-text"><span>981</span>k views</p>
           </div>
         </div>
-      </div>
-      </div>
+      </div> -->
+
 
     </section>
   </main>
