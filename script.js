@@ -1,4 +1,3 @@
-// let isSorted = false;
 let currentID = 0;
 const loadCatagories = async () => {
   let res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
